@@ -36,7 +36,7 @@ a {
 
 .conteneur-logo img {
     width: 50%;
-    max-width: 300px;                   /* pour les medias queries*/
+    max-width: 300px;                   /* pour les medias queries */
 }
 /*--------------main-----------*/
 
@@ -75,6 +75,26 @@ h1{
     margin-bottom: 30px;
 }
 
+@keyframes fadein {
+    from {opacity:0; top: 15px;}
+    to {opacity:1; top: 0px;}
+}
+
+.card a:nth-child(1) {
+    animation: fadein 6s;
+    position: relative;
+}
+
+.card a:nth-child(2) {
+    animation: fadein 8s;
+    position: relative;
+}
+
+.card a:nth-child(3) {
+    animation: fadein 10s;
+    position: relative;
+}
+
 h3 {
     font-size: 13px;
     color: grey;
@@ -91,61 +111,96 @@ h3 {
 
 .choix {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
     background-color: white;
     color: black;
-    padding: 9px;
     border-radius: 13px;
     box-shadow: 0 4px 8px 0 lightgrey;
     margin: 8px 0;
     max-width: 375px;                   /* pour les medias queries*/
+    overflow: hidden;
+}
+
+.choix .menu {
+    padding: 9px;
+    width: 100%;
+    overflow: hidden;
 }
 
 .choix h4{
-    font-weight: bold;
     font-size: 14px;
     margin: 0px;
-    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.choix .icone {
-    width: 100%;
+.choix .ingredients {
     display: flex;
     justify-content: space-between;
     padding-top: 4px;
 }
 
-.choix .icone p{
+.choix .ingredients p{
     font-size: 12px;
     margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.choix .icone span{
+.choix .ingredients span{
     font-weight: bold;
     font-size: 11px;
     margin-right: 10px;
 }
 
-.choix .icone i{
-    font-size: 30px;
-    font-weight: lighter;
-    padding: 30px;
-    align-self: center;
+.choix .check{
+    background-color: #99E2D0;
+    border-radius: 0 13px 13px 0;
+    text-align: center;
+    padding: 13px 0;
+    width: 0;
+    transition: width 1500ms;
 }
 
-#bouton_commander {
-    background-image: linear-gradient(to top, #9356DC, #FF79DA);
-    color: white;
-    border-radius: 25px;
-    box-shadow: 0 4px 8px 0 lightgrey;
-    padding: 11px;
-    font-size: 13px;
-    width: 150px;
+.choix .check i {
+    font-size: 15px;
+    background: white;
+    border-radius: 20px;
+    border: 5px solid white;
+    color: #99E2D0;
+    transform: rotate(0deg);
+    transition: transform 1500ms;
+    
+}
+
+.choix .menu:hover + .check{
+    width: 80px;
+}
+
+.choix .menu:hover + .check > i {
+    transform: rotate(360deg);
 }
 
 #commander {
     text-align: center;
     margin-bottom: 18px;
+}
+
+#bouton_commander {
+    background: linear-gradient(to bottom, #FF79DA 20%, #9356DC 100%);
+    color: white;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 grey;
+    padding: 11px;
+    font-size: 13px;
+    width: 150px;
+}
+
+#bouton_commander:hover {
+    opacity: 0.8;
+    box-shadow: 0 8px 16px 0 black;
 }
 
 /*--------------FOOTER---------------*/
@@ -189,8 +244,7 @@ nav span {
 }
 
 
-/*--------------MEDIAS QUERIES-------------*/
-/*--------------TABELETTE & DESKTOP------------*/
+/*--------------MEDIAS QUERIES TABELETTE & DESKTOP-------------*/
 
 @media all and (min-width: 769px) {
 
