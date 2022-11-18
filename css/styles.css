@@ -23,7 +23,7 @@ a {
 
 .conteneur-logo img {
     width: 45%;
-    max-width: 300px;                   // pour les medias queries
+    max-width: 300px;                   /*pour les medias queries*/
 }
 
 /*Main*/
@@ -64,13 +64,13 @@ h3 {
 }
 
 #bouton_explorer {
-    background-color: #FF79DA;
     color: white;
     border-radius: 25px;
     box-shadow: 0 4px 8px 0 lightgrey;
     padding: 10px 15px;
     font-size: 13px;
     margin: 8px;
+    background-image:  linear-gradient(to top, #9356DC, #FF79DA);
 }
 
 main h2 {
@@ -95,8 +95,9 @@ main h2 {
     box-shadow: 0 4px 8px 0 lightgrey;
     border-color: lightgrey;
     background-color: #f6f6f6;
-    max-width: 375px;                   // pour les medias queries
+    max-width: 375px;                   /*pour les medias queries*/
 }
+
 
 .choix span{
     padding: 4px 6px;
@@ -147,7 +148,7 @@ main h2 {
     border-radius: 15px;
     margin-bottom: 15px;
     box-shadow: 0 4px 8px 0 lightgrey;
-    max-width: 400px;                   // pour les medias queries
+    max-width: 400px;                   /* pour les medias queries*/
 }
 
 .card img {
