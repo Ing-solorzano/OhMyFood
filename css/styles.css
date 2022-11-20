@@ -73,6 +73,12 @@ h3 {
     background-image:  linear-gradient(to top, #9356DC, #FF79DA);
 }
 
+#bouton_explorer:hover{
+    opacity: 0.7;
+    border-color: lightgray;
+    box-shadow: 0 3px 3px 0 black;
+}
+
 main h2 {
     font-size: 20px;
 }
@@ -87,6 +93,10 @@ main h2 {
     margin-bottom: 10px;
 }
 
+.choix:hover {
+    opacity: 0.8;
+    background-color:   #f8e0f1;
+}
 .choix {
     display: flex;
     margin: 10px 0 18px 10px;
@@ -97,7 +107,6 @@ main h2 {
     background-color: #f6f6f6;
     max-width: 375px;                   /*pour les medias queries*/
 }
-
 
 .choix span{
     padding: 4px 6px;
