@@ -41,11 +41,11 @@ a {
 /*--------------main-----------*/
 
 main {
-  background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash3.jpg");
+  background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash-desk.jpg");
 
   background-size: contain;
   background-color: #cccccc;
-  padding-top: 300px;
+  padding-top: 235px;
 } 
 
 .choices{
@@ -92,6 +92,11 @@ h1{
 
 .card a:nth-child(3) {
     animation: fadein 10s;
+    position: relative;
+}
+
+.card a:nth-child(4) {
+    animation: fadein 12s;
     position: relative;
 }
 
