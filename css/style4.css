@@ -41,11 +41,11 @@ a {
 /*--------------main-----------*/
 
 main {
-  background-image: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash-mobile.jpg");
+  background-image: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash-desktop.jpg");
 
   background-size: contain;
   background-color: #cccccc;
-  padding-top: 235px;
+  padding-top: 240px;
 } 
 
 .choices{
