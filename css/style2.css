@@ -41,11 +41,11 @@ a {
 /*--------------main-----------*/
 
 main {
-  background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash-desk.jpg");
+  background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash-desktop.jpg");
 
   background-size: contain;
   background-color: #cccccc;
-  padding-top: 235px;
+  padding-top: 315px;
 } 
 
 .choices{
