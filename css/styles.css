@@ -11,6 +11,50 @@ body {
     font-family: Roboto, sans-serif;
 }
 
+/*-----------SPIN LOADER------------*/
+
+.loader{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background-color: #ffffff;
+    height: 100vh;
+    inset: 0;
+    opacity: 0.9;
+    -webkit-animation: vanish 500ms 3s forwards;
+    animation: vanish 500ms 3s forwards;
+    transform-origin: top;
+}
+
+@keyframes spin {
+    0%{ transform: rotate(0deg);}
+    100%{ transform: rotate(360deg);}
+}
+
+@keyframes vanish {
+    from {transform: scale(1);}
+    to {transform: scale(0);}
+}
+
+.loader::after {
+    content: "";
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+    0%{ transform: rotate(0deg);}
+    100%{ transform: rotate(360deg);}
+}
+/*------------fin SPIN LOADER------------*/
+
 a {
     text-decoration: none;
 }
