@@ -41,7 +41,7 @@ a {
 /*--------------main-----------*/
 
 main {
-  background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash-mobile.jpg");
+  background-image: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash-mobile.jpg");
 
   background-size: contain;
   background-color: #cccccc;
@@ -54,25 +54,63 @@ main {
     padding: 8px;
 }
 
-.choices .titre1{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.choices h1{
+    margin-left: 20px;
+}
+
+.choices h3{
+    margin-left: 20px;
+}
+
+.choices .underline{
+    margin-left: 20px;
+}
+
+
+/*-----------Div Titre avec coeur-------------*/
+
+.titre1{
+    position: relative;
+    color: grey;
 }
 
 h1{
     font-family: Shrikhand;
     font-size: 23px;
     font-weight: normal;
+    color: black;
 }
 
-.fa-heart {
-    padding-right: 20px;
-    color: grey;
+/*--------------------icone coeur-------------*/
+
+.titre1 i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
 }
+
+.titre1 .fas {
+    background-image: linear-gradient(#9356DC, #cb69dc);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    opacity: 0;
+    transition: all 0.5s ease-out;
+}
+
+.coeur:hover .fas {
+    cursor: pointer;
+    opacity: 1;
+    line-height: 100%;
+    transform: translateY(-45%);
+}
+
+/*-----------FIN icone coeur-------------*/
+
 
 .card {
     margin-bottom: 30px;
+    margin-left: 20px;
 }
 
 @keyframes fadein {
@@ -81,17 +119,17 @@ h1{
 }
 
 .card a:nth-child(1) {
-    animation: fadein 6s;
+    animation: fadein 1s;
     position: relative;
 }
 
 .card a:nth-child(2) {
-    animation: fadein 8s;
+    animation: fadein 2s;
     position: relative;
 }
 
 .card a:nth-child(3) {
-    animation: fadein 10s;
+    animation: fadein 3s;
     position: relative;
 }
 
@@ -161,7 +199,7 @@ h3 {
     text-align: center;
     padding: 13px 0;
     width: 0;
-    transition: width 1500ms;
+    transition: width 50ms;
 }
 
 .choix .check i {
@@ -171,7 +209,7 @@ h3 {
     border: 5px solid white;
     color: #99E2D0;
     transform: rotate(0deg);
-    transition: transform 1500ms;
+    transition: transform 50ms;
     
 }
 
@@ -189,18 +227,20 @@ h3 {
 }
 
 #bouton_commander {
-    background: linear-gradient(to bottom, #FF79DA 20%, #9356DC 100%);
+    background-image:  linear-gradient(to bottom right, #cb69dc, #cb69dc, #cb69dc,#cb69dc 43%,#9356DC, #9356DC);
     color: white;
+    border: 0;
     border-radius: 25px;
-    box-shadow: 0 4px 8px 0 grey;
+    box-shadow: 0 4px 8px 0 lightgrey;
     padding: 11px;
     font-size: 13px;
     width: 150px;
 }
 
 #bouton_commander:hover {
+    cursor: pointer;
     opacity: 0.8;
-    box-shadow: 0 8px 16px 0 black;
+    box-shadow: 0 8px 16px 0 lightgrey;
 }
 
 /*--------------FOOTER---------------*/
@@ -244,24 +284,34 @@ nav span {
 }
 
 
-/*--------------MEDIAS QUERIES TABELETTE & DESKTOP-------------*/
+/*--------------MEDIAS QUERIES TABELETTE -------------*/
 
 @media all and (min-width: 769px) {
 
     .conteneur-logo i {
         font-size: 30px;
     }
+
     .card {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-around;
+    
     }
 
     .choix {
     margin: 15px;
-    width: 225px;
+    width: 300px;
     }
-
 }
 
+/*--------------MEDIAS QUERIES DESKTOP-------------*/
 
+@media all and (min-width: 992px) {
 
+    .choices h1,h3{
+    display: flex;
+    justify-content: center;
+    color: black;
+}
+}
