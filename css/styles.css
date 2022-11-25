@@ -11,48 +11,44 @@ body {
     font-family: Roboto, sans-serif;
 }
 
-/*-----------SPIN LOADER------------*/
-
-.loader{
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    background-color: #ffffff;
-    height: 100vh;
-    inset: 0;
-    opacity: 0.9;
-    -webkit-animation: vanish 500ms 3s forwards;
-    animation: vanish 500ms 3s forwards;
-    transform-origin: top;
-}
-
-@keyframes spin {
-    0%{ transform: rotate(0deg);}
-    100%{ transform: rotate(360deg);}
-}
-
+/*--------------SPIN LOADER------------*/
 @keyframes vanish {
     from {transform: scale(1);}
     to {transform: scale(0);}
 }
 
-.loader::after {
-    content: "";
-    border: 16px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 16px solid #3498db;
-    width: 120px;
-    height: 120px;
-    -webkit-animation: spin 3s linear infinite;
-    animation: spin 3s linear infinite;
+@keyframes spin {
+
+    from {transform: rotate(0);}
+    to {transform: rotate(360deg);}
 }
 
-@keyframes spin {
-    0%{ transform: rotate(0deg);}
-    100%{ transform: rotate(360deg);}
+.load_spinner {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    height: 100vh;
+    inset: 0;
+    z-index: 1;
+    opacity: 0.9;
+    animation: vanish 500ms;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+    transform-origin: top;
 }
+
+.load_spinner::after {
+    content: "";
+    height: 100px;
+    width: 100px;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #9356DC;
+    border-radius: 100px;
+    animation: spin 1s linear infinite;
+}
+
 /*------------fin SPIN LOADER------------*/
 
 a {
@@ -67,11 +63,10 @@ a {
 
 .conteneur-logo img {
     width: 45%;
-    max-width: 300px;                   /*pour les medias queries*/
+    max-width: 375px;                   /*pour les medias queries*/
 }
 
 /*Main*/
-
 .info {
     display: flex;
     justify-content: center;
@@ -110,17 +105,20 @@ h3 {
 #bouton_explorer {
     color: white;
     border-radius: 25px;
-    box-shadow: 0 4px 8px 0 lightgrey;
+    box-shadow: 0 2px 2px 0 whitesmoke;
     padding: 10px 15px;
     font-size: 13px;
     margin: 8px;
-    background-image:  linear-gradient(to top, #9356DC, #cb69dc);
+    background-image:  linear-gradient(to bottom right, #cb69dc, #cb69dc, #cb69dc,#cb69dc 43%,#9356DC, #9356DC);
+    border:0;
 }
 
 #bouton_explorer:hover{
+    cursor: pointer;
     opacity: 0.7;
-    border-color: lightgray;
-    box-shadow: 0 3px 3px 0 black;
+    border-color: whitesmoke;
+    box-shadow: 0 0 2px 0 lightgrey;
+    color: white; 
 }
 
 main h2 {
@@ -201,7 +199,7 @@ main h2 {
     border-radius: 15px;
     margin-bottom: 15px;
     box-shadow: 0 4px 8px 0 lightgrey;
-    max-width: 400px;                   /* pour les medias queries*/
+    max-width: 375px;                   /* pour les medias queries*/
 }
 
 .card img {
@@ -223,15 +221,11 @@ main h2 {
     font-size: 11px;
     color: green;
 }
-.desc_resto{
-    display: flex;
-    justify-content: space-between;
-    margin-right: 10px;
-    padding: 10px;
-}
 
-.card .icone{
-    align-self: center;
+.desc_resto {
+    position: relative;
+    padding: 10px;
+    color: grey;
 }
 
 .desc_resto h4 {
@@ -246,20 +240,32 @@ main h2 {
     margin: 0;
     font-weight: normal;
     font-size: 14px;
-    color: grey;
 }
 
-.fa-heart::before {
-    content: "\f004";
-    color: grey;
-    transition: color 0.5s ease-out;
+.card i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
 }
 
-.fa-heart:hover::before {
-    color:  #ad56dc;
-    font-weight: bold;
-    cursor: pointer;
+/*-----------icones coeurs-------------*/
+
+.card .fas {
+    background-image: linear-gradient(#9356DC, #cb69dc);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    opacity: 0;
+    transition: all 0.5s ease-out;
 }
+
+.card .desc_resto .coeur:hover .fas {
+    opacity: 1;
+    line-height: 100%;
+    transform: translateY(-45%);
+}
+
+/*-----------FIN icones coeurs-------------*/
 
 /*--------------FOOTER---------------*/
 footer {
@@ -297,35 +303,47 @@ nav span {
     width: 20px;
 }
 
-.fa-solid {
+footer .fa-solid {
     font-size: 10px;
 }
 
 
-/*--------------MEDIAS QUERIES-------------*/
-/*--------------TABELETTE & DESKTOP------------*/
+/*----------------MEDIAS QUERIES-------------*/
+/*--------------TABELETTE------------------*/
 
 @media all and (min-width: 769px) {
 
     .box_choix {
         display: flex;
-        flex-wrap: wrap;
+        justify-content: space-around;
     }
 
     .choix {
-    margin: 15px;
-    width: 225px; 
+        margin: 15px;
+        width: 30%; 
     }
 
     .box_cards {
         display: flex;
-        flex-wrap: wrap;
+        justify-content: space-around;
     }
 
     .card {
-    margin: 15px;
-    width: 275px;
+        margin: 15px;
     }
 
 }
 
+/*------------------DESKTOP----------------*/
+
+@media all and (min-width: 992px) {
+
+    .box_cards_child {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .card {
+        width: 45%;
+    }
+}
