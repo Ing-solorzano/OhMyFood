@@ -118,22 +118,22 @@ h1{
 }
 
 .card a:nth-child(1) {
-    animation: fadein 1s;
-    position: relative;
-}
-
-.card a:nth-child(2) {
     animation: fadein 2s;
     position: relative;
 }
 
+.card a:nth-child(2) {
+    animation: fadein 4s;
+    position: relative;
+}
+
 .card a:nth-child(3) {
-    animation: fadein 3s;
+    animation: fadein 6s;
     position: relative;
 }
 
 .card a:nth-child(4) {
-    animation: fadein 4s;
+    animation: fadein 8s;
     position: relative;
 }
 
@@ -213,7 +213,7 @@ h3 {
     border: 5px solid white;
     color: #99E2D0;
     transform: rotate(0deg);
-    transition: transform 50ms;
+    transition: transform 700ms;
     
 }
 
