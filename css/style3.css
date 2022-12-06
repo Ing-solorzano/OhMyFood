@@ -54,19 +54,6 @@ main {
     padding: 8px;
 }
 
-.choices h1{
-    margin-left: 20px;
-}
-
-.choices h3{
-    margin-left: 20px;
-}
-
-.choices .underline{
-    margin-left: 20px;
-}
-
-
 /*-----------Div Titre avec coeur-------------*/
 
 .titre1{
@@ -110,7 +97,6 @@ h1{
 
 .card {
     margin-bottom: 30px;
-    margin-left: 20px;
 }
 
 @keyframes fadein {
@@ -155,7 +141,7 @@ h3 {
     border-radius: 13px;
     box-shadow: 0 4px 8px 0 lightgrey;
     margin: 8px 0;
-    max-width: 375px;                   /* pour les medias queries*/
+    max-width: 100%;                   /* pour les medias queries*/
     overflow: hidden;
 }
 
@@ -199,7 +185,7 @@ h3 {
     text-align: center;
     padding: 13px 0;
     width: 0;
-    transition: width 50ms;
+    transition: width 1000ms 500ms;
 }
 
 .choix .check i {
@@ -209,7 +195,7 @@ h3 {
     border: 5px solid white;
     color: #99E2D0;
     transform: rotate(0deg);
-    transition: transform 700ms;
+    transition: transform 1000ms 500ms;
     
 }
 
@@ -305,7 +291,7 @@ nav span {
 
     .choix {
     margin: 15px;
-    width: 300px;
+    width: 100%;
     }
 }
 
@@ -321,5 +307,5 @@ nav span {
 
 .underline {
     display: none;
-}
+    }
 }
