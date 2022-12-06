@@ -63,7 +63,7 @@ a {
 
 .conteneur-logo img {
     width: 45%;
-    max-width: 375px;                   /*pour les medias queries*/
+    max-width: 300px;                   /*pour les medias queries*/
 }
 
 /*Main*/
@@ -139,6 +139,7 @@ main h2 {
     opacity: 0.8;
     background-color:   #f8e0f1;
 }
+
 .choix {
     display: flex;
     margin: 10px 0 18px 10px;
@@ -147,7 +148,7 @@ main h2 {
     box-shadow: 0 4px 8px 0 lightgrey;
     border-color: lightgrey;
     background-color: #f6f6f6;
-    max-width: 375px;                   /*pour les medias queries*/
+    max-width: 100%;                   /*pour les medias queries*/
 }
 
 .choix span{
@@ -172,17 +173,17 @@ main h2 {
     margin-left: 15px;
 }
 
+/*----------------------icones fonctionnement------------------*/
 .choix i {
     align-self: center;
+    color: grey
 }
 
-.fa-mobile-screen, .fa-list {
-    color: grey;
-}
-
-.fa-store {
+.choix:hover i{
     color: #9356DC;
 }
+
+/*--------------------FIN icones fonctionnement-----------------*/
 
 .restaurants {
     padding: 25px 15px 30px 15px;
@@ -199,7 +200,7 @@ main h2 {
     border-radius: 15px;
     margin-bottom: 15px;
     box-shadow: 0 4px 8px 0 lightgrey;
-    max-width: 375px;                   /* pour les medias queries*/
+    max-width: 100%;                   /* pour les medias queries*/
 }
 
 .card img {
@@ -320,7 +321,7 @@ footer .fa-solid {
 
     .choix {
         margin: 15px;
-        width: 30%; 
+        width: 100%; 
     }
 
     .box_cards {
@@ -344,6 +345,6 @@ footer .fa-solid {
     }
 
     .card {
-        width: 45%;
+        width: 100%;
     }
 }
